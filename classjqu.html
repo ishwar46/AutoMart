@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K cha yaaar</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<!-- Normal Alert -->
+
+<body>
+    <button id="btn">Touch Me</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                alert("Ishuuu");
+            });
+        });
+    </script>
+
+
+    <!-- TextBox Alert -->
+    <input type="text" id="txt">
+    <button id="btn_touch">Print Meeeeee</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn_touch").click(function () {
+                alert($("#txt").val());
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
