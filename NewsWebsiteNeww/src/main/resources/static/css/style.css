@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: -20px 0 50px;
+    flex-direction: column;
+
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.25rem;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-weight: 600;
+    color: #23ad5c;
+    font-size: 0.7rem;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 15px 0;
+}
+
+button {
+
+    border-radius: 20px;
+    border: 1px solid #23ad5c;
+    background: transparent;
+    color: #23ad5c;
+    padding: 0.75rem 2.8rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.8s;
+    margin: 20px 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+}
+
+button:hover {
+    background: #23ad5c;
+    color: #f4f4f4;
+}
+
+button:active {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+form {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
