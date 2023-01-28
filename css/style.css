@@ -715,3 +715,317 @@ Donate Blood Section with form */
 }
 
 /* END Request Blood */
+
+.section-events {
+    background-color: var(--bg);
+}
+
+.section-events-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.common-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4rem;
+    color: var(--heading);
+}
+
+.main-heading {
+    text-transform: uppercase;
+    color: var(--heading);
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+
+.events-para {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+    font-weight: 500;
+}
+
+.events-images {
+    gap: 3.2rem;
+    margin-top: 6.4rem;
+}
+
+.img-ovelay {
+    position: relative;
+    overflow: hidden;
+}
+
+.events-images img {
+    width: 100%;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-ovelay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(0deg,
+            rgb(252, 45, 45) 0%,
+            rgb(252, 156, 156) 100%);
+    opacity: 0;
+    color: var(--light-one);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+    /* box-shadow: inset 0 0 0 0.5rem var(--helper-tint); */
+}
+
+.img-ovelay:hover>.overlay {
+    opacity: 0.8;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.img-ovelay .overlay .common-heading {
+    margin: 0;
+    color: var(--third);
+    text-decoration: none;
+}
+
+.img-ovelay .overlay .common-heading:hover {
+    color: var(--third);
+}
+
+/* Smaller Screen */
+
+@media screen and (max-width: 768px) {
+    .section-events {
+        padding: 5rem 0;
+    }
+
+    .section-events-data {
+        text-align: center;
+    }
+
+    .common-heading {
+        font-size: 2.5rem;
+    }
+
+    .events-para {
+        margin-bottom: 3rem;
+    }
+
+    .events-images {
+        margin-top: 3rem;
+        gap: 2rem;
+    }
+}
+
+/* END Events */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 9rem;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+
+    /* Center slide text vertically */
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.swiper-client-msg {
+    padding: 5rem 8rem;
+    background-color: var(--third);
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: var(--shadpw);
+    position: relative;
+}
+
+.swiper-client-msg::before {
+    content: "";
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 5rem;
+    height: 5rem; */
+    border: 5rem solid var(--third);
+    border-color: transparent;
+    border-top-color: var(--third);
+}
+
+.swiper-client-msg p::before {
+    content: "\f10d";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    font-size: 5rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #ced3ff;
+}
+
+.swiper-client-msg p::after {
+    /* display: inline-block */
+    content: "\f10e";
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+
+    font-size: 5rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #ced3ff;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-client-data {
+    align-items: center;
+    justify-items: start;
+    justify-content: start;
+    gap: 1.4rem;
+    margin-top: 3.2rem;
+}
+
+.swiper-client-data img {
+    max-width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 0.5rem solid #ced3ff;
+}
+
+.swiper-client-data p:first-child {
+    font-weight: bold;
+    color: var(--heading);
+}
+
+.swiper-client-data p:last-child {
+    color: var(--third);
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.swiper-pagination-bullet {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--third);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* END Testimonials */
+
+.section-footer {
+
+    background: var(--main-color);
+}
+
+.section-footer h3 {
+    color: var(--light-one);
+    margin-bottom: 4rem;
+}
+
+.f-about p {
+    color: var(--light-one);
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+.f-links ul,
+.f-services ul,
+.f-address address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a {
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.f-links span,
+.f-services span,
+.f-address span {
+    margin-right: 1rem;
+}
+
+.f-address p {
+    font-style: normal;
+    color: #ffffff;
+}
+
+.f-social-icons {
+    margin: 5rem 0;
+    text-align: center;
+    color: #fd0000;
+}
+
+.f-social-icons .icons {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    animation: water-wave 3s linear infinite;
+    color: var(--main-color);
+}
+
+.f-credits p {
+    text-align: center;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #37e240;
+}
