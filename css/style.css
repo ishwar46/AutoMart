@@ -345,6 +345,8 @@ header .points2 {
     }
 }
 
+
+
 /* END SLIDER */
 
 /* Reusable Components */
@@ -354,7 +356,7 @@ header .points2 {
 }
 
 .section {
-    padding: 9rem 0;
+    padding: 5rem 0;
 }
 
 .grid {
@@ -419,9 +421,297 @@ Hero  Section Start
 }
 
 .hero-img {
-    max-width: 50%;
+    max-width: 100%;
     z-index: 1;
 }
 
+/* Smaller Screen */
+@media screen and (max-width: 768px) {
+    .section-hero {
+        padding: 5rem 0;
+    }
+
+    .section-hero-data {
+        text-align: center;
+    }
+
+    .hero-top-data {
+        font-size: 1.2rem;
+    }
+
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .hero-paragraph {
+        margin-bottom: 3rem;
+    }
+
+    .section-hero-image {
+        margin-top: 3rem;
+    }
+
+    .hero-img {
+        max-width: 80%;
+    }
+}
 
 /* END HERO */
+
+
+/* ===========================================
+work data Section
+======================================= */
+.section-work-data {
+    background: -webkit-linear-gradient(0deg,
+            rgb(240, 52, 52) 0%,
+            rgb(255, 120, 120) 100%);
+    color: var(--light-one);
+    text-align: center;
+}
+
+.common-numbers {
+    font-size: 4.8rem;
+}
+
+.section-work-data p {
+    color: var(--third);
+}
+
+/* END work data */
+
+/* Why Us Section */
+
+.section-why-us {
+    background: var(--bg);
+}
+
+.section-why-us-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.why-us-top-data {
+    text-transform: uppercase;
+    color: var(--heading);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+}
+
+.why-us-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4rem;
+    color: var(--heading);
+}
+
+.why-us-paragraph {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+}
+
+.section-why-us-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-us-img {
+    max-width: 80%;
+    z-index: 1;
+}
+
+/* Smaller Screen */
+
+@media screen and (max-width: 768px) {
+    .section-why-us {
+        padding: 5rem 0;
+    }
+
+    .section-why-us-data {
+        text-align: center;
+    }
+
+    .why-us-top-data {
+        font-size: 1.2rem;
+    }
+
+    .why-us-heading {
+        font-size: 2.5rem;
+    }
+
+    .why-us-paragraph {
+        margin-bottom: 3rem;
+    }
+
+    .section-why-us-image {
+        margin-top: 3rem;
+    }
+
+    .why-us-img {
+        max-width: 80%;
+    }
+}
+
+/* END Why Us */
+
+/* 
+Donate Blood Section with form */
+
+.section-donate-blood {
+    background: var(--bg);
+}
+
+.section-donate-blood-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.donate-blood-top-data {
+    text-transform: uppercase;
+    color: var(--heading);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+}
+
+.donate-blood-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4rem;
+    color: var(--heading);
+}
+
+.donate-blood-paragraph {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+}
+
+.section-donate-blood-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-blood-img {
+    max-width: 80%;
+    z-index: 1;
+}
+
+/* Smaller Screen */
+
+@media screen and (max-width: 768px) {
+    .section-donate-blood {
+        padding: 5rem 0;
+    }
+
+    .section-donate-blood-data {
+        text-align: center;
+    }
+
+    .donate-blood-top-data {
+        font-size: 1.2rem;
+    }
+
+    .donate-blood-heading {
+        font-size: 2.5rem;
+    }
+
+    .donate-blood-paragraph {
+        margin-bottom: 3rem;
+    }
+
+    .section-donate-blood-image {
+        margin-top: 3rem;
+    }
+
+    .donate-blood-img {
+        max-width: 80%;
+    }
+}
+
+/* Request Blood Section with form */
+
+.section-request-blood {
+    background: var(--bg);
+}
+
+.section-request-blood-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.request-blood-top-data {
+    text-transform: uppercase;
+    color: var(--heading);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+}
+
+.request-blood-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4rem;
+    color: var(--heading);
+}
+
+.request-blood-paragraph {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+}
+
+.section-request-blood-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-blood-img {
+    max-width: 80%;
+    z-index: 1;
+}
+
+/* Smaller Screen */
+
+@media screen and (max-width: 768px) {
+    .section-request-blood {
+        padding: 5rem 0;
+    }
+
+    .section-request-blood-data {
+        text-align: center;
+    }
+
+    .request-blood-top-data {
+        font-size: 1.2rem;
+    }
+
+    .request-blood-heading {
+        font-size: 2.5rem;
+    }
+
+    .request-blood-paragraph {
+        margin-bottom: 3rem;
+    }
+
+    .section-request-blood-image {
+        margin-top: 3rem;
+    }
+
+    .request-blood-img {
+        max-width: 80%;
+    }
+}
+
+/* END Request Blood */
