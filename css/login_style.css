@@ -136,13 +136,13 @@ input {
 }
 
 .btn-login {
-    background-color: #9a73e8;
+    background-color: #4054D2;
     color: #ffffff;
     border-radius: 9px;
 }
 
 .btn-login:hover {
-    background-color: #7027ed;
+    background-color: #0B1CD5;
 }
 
 .btn-gogle-auth {
@@ -208,7 +208,7 @@ a:hover {
         position: relative;
         border-radius: 0;
         width: 80%;
-        background: linear-gradient(to right, #FFECD2, #FCB69F);
+        background: linear-gradient(to right, #ff0404, #fcf8f6);
         width: 100%;
         align-items: flex-start;
         position: absolute;
