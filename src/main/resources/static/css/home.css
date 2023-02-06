@@ -1,0 +1,125 @@
+.carousel-indicators li {
+    background-color: #333;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    flex-basis: 300px !important;
+    background-color: black;
+    width: 400px;
+    height: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 10px ;
+    display: inline-block;
+}
+/*.card-deck{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
+
+.card img{
+    border-radius:15px 15px 0px 0px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 50%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    height: 30px;
+}
+
+.card-title {
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+}
+
+.card-text {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+}
+
+.card-footer .btn {
+    width: 100%;
+    height: 35px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-footer .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.card-footer .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.1);
+}

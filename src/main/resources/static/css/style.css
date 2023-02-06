@@ -1,0 +1,152 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: white;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+span {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    line-height: 50px;
+}
+
+.container {
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+/*.btn {*/
+/*    padding-left: 10px;*/
+/*}*/
+
+.alert {
+    padding-top: 5px;
+}
+
+#header-username{
+    color: ghostwhite;
+}
+
+nav {
+    height: 60px;
+}
+.home{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /*padding-bottom: 0px;*/
+    padding-left: 10px;
+    padding-right: 15px;
+    /*font-size: 30px;*/
+}
+
+
+/*.home {*/
+/*    !*font-size: 30px;*!*/
+/*    !*text-decoration: none;*!*/
+
+/*    transition: all 300ms;*/
+/*}*/
+
+
+.card-deck {
+    padding-left: 20px;
+}
+
+.card {
+    max-width: 17rem;
+}
+
+.search-box input {
+    padding-right: 35px;
+    border-color: #dfe3e8;
+    border-radius: 4px !important;
+    box-shadow: none;
+}
+.search-box .input-group-text {
+    min-width: 35px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    padding: 7px;
+    height: 100%;
+}
+.search-box i {
+    color: #a0a5b1;
+    font-size: 19px;
+}
+ a {
+    position: relative;
+    color: #888;
+    font-size: 15px;
+     color: white;
+}
+ a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0%;
+    left: 8px;
+    bottom: -1px;
+    transition: 0.7s;
+}
+ a:hover{
+     text-decoration: none;
+    color: rgb(135, 133, 133);
+}
+a:hover::after{
+    width: 80%;
+}
+.navbar-dark .navbar-text {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.logout {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.logout:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*.top{*/
+/*    padding-top: 10px;*/
+/*}*/
+
+/*#cart {*/
+/*    width: 44px;*/
+/*    height: 44px;*/
+/*}*/

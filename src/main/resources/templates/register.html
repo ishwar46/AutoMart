@@ -1,0 +1,207 @@
+<!--<!DOCTYPE HTML>-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css/}" />-->
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}" />-->
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />-->
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/register.css}" />-->
+<!--</head>-->
+
+<!--<body>-->
+<!--    <div th:replace="fragments/header :: header"></div>-->
+<!--    <div class="container">-->
+<!--        <div class="row d-flex justify-content-center" style="margin-top:20px">-->
+<!--            <div class="register col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">-->
+<!--                <form class="form-signin" autocomplete="off" th:action="@{register}" th:object="${userForm}" method="POST">-->
+<!--                    <fieldset>-->
+<!--                        <h1 class="title">Register</h1>-->
+<!--                        <label th:text="#{user.username} + '*'"></label>-->
+<!--                        <div class="form-group input-box ">-->
+<!--                            <input type="text" th:field="*{username}" class=" input-lg" title="username" />-->
+<!--                            <div class="underline"></div>-->
+<!--                            <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>-->
+<!--                        </div>-->
+<!--                        <label>Email*</label>-->
+<!--                        <div class="form-group input-box ">-->
+<!--                            <input type="email" th:field="*{email}" class=" input-lg" title="email" required/>-->
+<!--                            <div class="underline"></div>-->
+<!--                            <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>-->
+<!--                        </div>-->
+<!--                            <label>Password</label>-->
+<!--                        <div class="form-group input-box ">-->
+<!--                            <input type="password" th:field="*{password}" class=" input-lg" title="password" required/>-->
+<!--                            <div class="underline"></div>-->
+<!--                            <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>-->
+<!--                        </div>-->
+<!--                            <label>Confirm-Password</label>-->
+<!--                        <div class="form-group input-box">-->
+<!--                            <input type="password" th:field="*{passwordConfirm}" class=" input-lg" title="passwordConfirm" required/>-->
+<!--                            <div class="underline"></div>-->
+<!--                            <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}"></div>-->
+<!--                        </div>-->
+<!--                            <label>Full Name</label>-->
+<!--                        <div class="form-group input-box">-->
+<!--                            <input type="text" th:field="*{fullName}" class=" input-lg" title="firstName" />-->
+<!--                            <div class="underline"></div>-->
+<!--                            <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></div>-->
+<!--                        </div>-->
+<!--                            <label>Address</label>-->
+<!--                        <div class="form-group input-box">-->
+<!--                            <input type="text" th:field="*{city}" class=" input-lg" title="city" />-->
+<!--                            <div class="underline"></div>-->
+<!--                            <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></div>-->
+<!--                        </div>-->
+<!--                        <div class="btn col-lg-12">-->
+<!--                            <p class="mb-3">All fields with * are required!</p>-->
+<!--                            <input class="btn btn-outline-dark" type="submit" th:value="#{register.button}" />-->
+<!--                        </div>-->
+<!--                    </fieldset>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+            rel="stylesheet"
+            type="text/css"
+            th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}"
+    />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/register.css}" />
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container">
+    <div class="row d-flex justify-content-center" style="margin-top:20px">
+        <div class="register col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form
+                    class="form-signin"
+                    autocomplete="off"
+                    th:action="@{register}"
+                    th:object="${userForm}"
+                    method="POST"
+            >
+                <fieldset>
+                    <h1 class="title">Register</h1>
+                    <div class="form-group input-box ">
+                        <label th:text="#{user.username} + '*'"></label>
+                        <input
+                                type="text"
+                                th:field="*{username}"
+                                class="input-lg"
+                                title="username"
+                        />
+                        <div class="underline"></div>
+                        <div
+                                class="alert alert-danger error-alert"
+                                th:if="${#fields.hasErrors('username')}"
+                                th:errors="*{username}"
+                        ></div>
+                    </div>
+                    <div class="form-group input-box ">
+                        <label>Full Name*</label>
+                        <input
+                                type="email"
+                                th:field="*{fullName}"
+                                class="input-lg"
+                                title="fullname"
+                                required
+                        />
+                        <div class="underline"></div>
+                        <div
+                                class="alert alert-danger error-alert"
+                                th:if="${#fields.hasErrors('email')}"
+                                th:errors="*{email}"
+                        ></div>
+                    </div>
+                    <div class="form-group input-box ">
+                        <label>Email*</label>
+                        <input
+                                type="email"
+                                th:field="*{email}"
+                                class="input-lg"
+                                title="email"
+                                required
+                        />
+                        <div class="underline"></div>
+                        <div
+                                class="alert alert-danger error-alert"
+                                th:if="${#fields.hasErrors('email')}"
+                                th:errors="*{email}"
+                        ></div>
+                    </div>
+                    <div class="form-group input-box ">
+                        <label>Password</label>
+                        <input
+                                type="password"
+                                th:field="*{password}"
+                                class="input-lg"
+                                title="password"
+                                required
+                        />
+                        <div class="underline"></div>
+                        <div
+                                class="alert alert-danger error-alert"
+                                th:if="${#fields.hasErrors('password')}"
+                                th:errors="*{password}"
+                        ></div>
+                    </div>
+                    <div class="form-group input-box ">
+                        <label>Confirm Password</label>
+                        <input
+                                type="password"
+                                th:field="*{passwordConfirm}"
+                                class="input-lg"
+                                title="Confirm password"
+                                required
+                        />
+                        <div class="underline"></div>
+                        <div
+                                class="alert alert-danger error-alert"
+                                th:if="${#fields.hasErrors('passwordConfirm')}"
+                                th:errors="*{passwordConfirm}"
+                        ></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">
+                            Register
+                        </button>
+                    </div>
+                </fieldset>
+<!--                Already have an account? -->
+                <div class="form-group d-flex justify-content-between align-items-center">
+                    <span th:text="#{register.already}" style="color: #91a8ff"></span>
+                    <a th:href="@{/login}" th:text="#{login.button}"></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
