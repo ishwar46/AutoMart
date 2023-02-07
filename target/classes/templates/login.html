@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+</head>
+
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container">
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="login-form col-xs-12 col-sm-8 col-md-6">
+            <div class="text-center mb-4">
+                <img th:src="@{/images/logoauto.png}" height="100" alt="logo" />
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            </div>
+            <form autocomplete="off" th:action="@{/login}" class="form-signin" method="POST">
+                <div th:if="${param.logout}">
+                    <div class="alert alert-info" th:text="#{login.alert.logged_out}"></div>
+                </div>
+                <div class="form-group">
+                    <label th:text="#{user.username}"></label>
+                    <input type="text" name="username" class="form-control" placeholder="Username" required autofocus />
+                </div>
+                <div class="form-group">
+                    <label th:text="#{user.password}"></label>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required />
+                </div>
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger" th:text="*{error}"></div>
+                </div>
+                <div class="form-group d-flex justify-content-between align-items-center">
+                    <span th:text="#{login.no_account}" style="color: #91a8ff"></span>
+                    <a th:href="@{/register}" th:text="#{register.button}" style="color: #0062cc"></a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" th:value="#{user.log_in}">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+

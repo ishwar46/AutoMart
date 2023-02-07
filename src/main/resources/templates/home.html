@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit=no>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css/}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+</head>
+
+<body>
+
+    <div th:replace="fragments/header :: header"></div>
+
+    <div class="container-fluid mt-2" >
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" sec:authorize="hasRole('ROLE_USER')">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/custom.png" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/motul.png" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/custom.png" alt="Image 3">
+
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+
+        <br>
+
+        <div class="box-heading">
+            <h2 class="cnit-h2">Best Selling</h2>
+            <div class="float-right">
+                <a href="https://hardwarepasal.com/product?clearanceSaleProducts=1" style="color: #3f3f3f;" class="seeAll">See All &gt;</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="card-deck">
+                <div class="card" th:each="product : ${products}" th:if="${!products.isEmpty()}">
+                    <img class="card-img-top" th:if="${!product.getImageUrl().isEmpty()}" th:src="${product.getImageUrl()}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title" th:text="${product.getName()}"></h4>
+                        <p class="card-text" th:text="${product.getDescription()}"></p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="textprice mb-0" th:text="${product.getPrice()}"></p>
+                        <div class="d-flex justify-content-end">
+                            <sec:authorize sec:authorize="hasRole('ROLE_ADMIN')">
+                                <button class="btn mr-1">
+                                    <a th:href="@{'product/delete/' + ${product.getId()}}" class="text-dark">Edit</a>
+                                </button>
+                                <button class="btn">
+                                    <a th:href="@{'product/edit/' + ${product.getId()}}" class="text-dark">Delete</a>
+                                </button>
+                            </sec:authorize>
+                            <sec:authorize sec:authorize="hasRole('ROLE_USER')">
+                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>
+                            </sec:authorize>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div sec:authorize="hasRole('ROLE_ADMIN')">
+            <span th:text="#{product.count} + ' ' + ${productsCount}"></span>
+        </div>
+    </div>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+</html>

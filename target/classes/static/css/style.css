@@ -1,0 +1,252 @@
+/*===== VARIABLES CSS =====*/
+:root {
+    /*** Color ***/
+    --first-color: #372759;
+    --white-color: #E9EAEC;
+    --dark-color: #372759;
+    --dark-color-lighten: #F2F5FF;
+    /*** Fonts ***/
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: white;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+span {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    line-height: 50px;
+}
+
+.container {
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+.alert {
+    padding-top: 5px;
+}
+
+#header-username{
+    color: ghostwhite;
+}
+
+nav {
+    height: 60px;
+}
+.home{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /*padding-bottom: 0px;*/
+    padding-left: 10px;
+    padding-right: 15px;
+    /*font-size: 30px;*/
+}
+
+.card-deck {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+
+}
+
+.card {
+    width: 5%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.card-img-top {
+    top:2px;
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body {
+    padding: 10px;
+    color: #9f7ee7;
+
+}
+
+.card-footer {
+    background-color: #eee;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.btn-primary {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.text-white {
+    color: white;
+}
+
+ a {
+    position: relative;
+    color: #888;
+    font-size: 15px;
+     color: white;
+}
+ a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0%;
+    left: 8px;
+    bottom: -1px;
+    transition: 0.7s;
+}
+ a:hover{
+     text-decoration: none;
+    color: rgb(0, 69, 244);
+}
+a:hover::after{
+    width: 80%;
+}
+.navbar-dark .navbar-text {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.logout {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.logout:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar{
+    background-color: #008cc0;
+}
+
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f7f7f7;
+}
+
+.pdname{
+    font-size: 20px;
+    font-weight: bold;
+    color: #008cc0;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ProductCard New*/
+
+.product-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color-lighten);
+}
+
+.product-card{
+    width: 320px;
+    height: 400px;
+    background-color: var(--dark-color);
+    border-radius: 1rem;
+    color: var(--white-color);
+    overflow-y: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.card_img {
+    position: absolute;
+    width: 260px;
+    filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.61));
+}
+.card_data {
+    transform: translateY(13.2rem);
+    text-align: center;
+}
+
+.card_title {
+    font-size: var(--h1-font-size);
+    color: var(--white-color);
+    margin-bottom: .5rem;
+}
+
+.card_price {
+    display: inline-block;
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    color: #9f7ee7;
+}
+
+.card_description {
+    font-size: var(--small-font-size);
+    text-align: initial;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+}
+
+.card_button {
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: var(--white-color);
+    color: var(--first-color);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: 0.2s;
+    opacity: 0;
+}

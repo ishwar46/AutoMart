@@ -1,0 +1,63 @@
+h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+form {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 80%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    background-color: #fff;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.error-alert {
+    background-color: #ffc0c0;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.3);
+}
+
+.form .btn {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.form .btn:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+

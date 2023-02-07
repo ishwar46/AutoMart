@@ -1,0 +1,14 @@
+com\roshan\shop\creator\UserCreator.class
+com\roshan\shop\service\ProductServiceTests.class
+com\roshan\shop\service\UserServiceTests.class
+com\roshan\shop\controller\ControllersTests.class
+com\roshan\shop\ApplicationTests.class
+com\roshan\shop\repository\ProductRepositoryTests.class
+com\roshan\shop\creator\ProductCreator.class
+com\roshan\shop\model\ProductEntityTests.class
+com\roshan\shop\model\UserEntityTests.class
+com\roshan\shop\controller\HomeControllerMvcTests.class
+com\roshan\shop\controller\LoginControllerMvcTests.class
+com\roshan\shop\repository\UserRepositoryTests.class
+com\roshan\shop\controller\CartControllerMvcTests.class
+com\roshan\shop\service\ShoppingCartServiceTests.class
