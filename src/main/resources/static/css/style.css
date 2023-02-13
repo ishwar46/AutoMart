@@ -36,9 +36,11 @@ span {
 }
 
 footer {
-    position: absolute;
+    background-color: #008cc0;
+    position: relative;
     bottom: 0;
-    line-height: 50px;
+    line-height: 20px;
+    /*height:100px ;*/
 }
 
 .container {

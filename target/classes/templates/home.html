@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<div class="d-flex flex-column">
     <div th:replace="fragments/header :: header"></div>
 
     <div class="container-fluid mt-2" >
@@ -79,14 +79,13 @@
                                 </button>
                             </sec:authorize>
                             <sec:authorize sec:authorize="hasRole('ROLE_USER')">
-                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>
+                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}" onclick="openPopup()"></a>
                             </sec:authorize>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <br>
         <br>
 
@@ -95,8 +94,10 @@
         </div>
     </div>
 
-    <div th:replace="fragments/footer :: footer"></div>
 
+<!--        <div th:replace="fragments/footer :: footer">-->
+<!--            Static Footer-->
+<!--        </div>-->
+</div>
 </body>
-
 </html>

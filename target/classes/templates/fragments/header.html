@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css/}" />
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
     <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <!-- Font Awesome CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
     <title th:text="#{header.app.title}"></title>
 </head>
 <body>
 <div th:fragment="header">
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logoauto.png}" height="70" alt="logo">
+            <img src="/images/logoauto.png" height="70" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,37 +31,46 @@
                     <a class="nav-link" href="/home">Home</a>
                 </li>
                 <li class="nav-item" sec:authorize="hasRole('ROLE_USER')">
-                    <a class="nav-link" th:href="@{/cart}">Cart</a>
+                    <a class="nav-link" href="/cart">Cart</a>
                 </li>
                 <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
-                    <a class="nav-link" th:href="@{/list}">User Details</a>
+                    <a class="nav-link" href="/list">User Details</a>
                 </li>
                 <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
-                    <a class="nav-link" th:href="@{product/new}">Add New Product</a>
+                    <a class="nav-link" href="/product/new">Add New Product</a>
                 </li>
                 <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
-                    <a class="nav-link" th:href="@{product/new}">Add New Category</a>
+                    <a class="nav-link" href="/product/new">Add New Category</a>
                 </li>
                 <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <span class="navbar-text" th:text="#{header.logged}"></span>
+                    <span class="navbar-text" sec:authorize="isAuthenticated()">Logged in as</span>
                 </li>
                 <li class="nav-item" sec:authorize="isAuthenticated()">
                     <a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin}" style="color: #1e90ff" th:text="${#httpServletRequest.getRemoteUser().toUpperCase()}"></a>
                     <a class="nav-link" sec:authorize="hasRole('ROLE_USER')" th:href="@{/user}" style="color: #91a8ff;" th:text="${#httpServletRequest.getRemoteUser().toUpperCase()}"></a>
                 </li>
                 <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link logout" th:href="@{/logout}" th:text="#{user.log_out}"></a>
+                    <a class="nav-link logout" th:href="@{/logout}">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
                 </li>
                 <li class="nav-item" sec:authorize="!isAuthenticated()">
-                    <a class="nav-link" th:href="@{/login}" th:text="#{user.log_in}"></a>
+                    <a class="nav-link" href="/login">Log in</a>
                 </li>
                 <li class="nav-item" sec:authorize="!isAuthenticated()">
-                    <a class="nav-link" th:href="@{/register}" th:text="#{register.button}"></a>
+                    <a class="nav-link" href="/register">Register</a>
                 </li>
             </ul>
         </div>
     </nav>
 </div>
+
+<!-- Latest jQuery library -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Latest Bootstrap JavaScript library -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </body>
 
