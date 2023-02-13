@@ -1,0 +1,111 @@
+.card {
+    height: 340px;
+    width: 310px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover .heart {
+    top: 10px;
+}
+
+.heart {
+    z-index: 1;
+    position: absolute;
+    top: -60px;
+    right: 10px;
+    transition: all 0.5s;
+}
+
+.heart i {
+    font-size: 22px;
+    color: blue;
+}
+
+.heart-red {
+    color: red !important;
+}
+
+.top-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.top-div .border {
+    width: 100%;
+    height: 200px;
+}
+
+.top-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.top-div span {
+    height: 28px;
+    width: 60px;
+    background-color: #124FEB;
+    color: #fff;
+    position: absolute;
+    top: 185px;
+    left: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.bottom-div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.bottom-div p {
+    font-size: 13px;
+    color: #A89495;
+}
+
+.last-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.fa-shopping-bag {
+    font-size: 25px;
+    color: blue;
+}
+
+.fa-comment-o {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+}
+
+.buttons button {
+    height: 30px;
+    width: 80px;
+    color: blue;
+    border: 2px solid blue;
+    background-color: #fff;
+    font-size: 13px;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.buttons:hover button {
+    color: white;
+    background-color: blue;
+
+}
