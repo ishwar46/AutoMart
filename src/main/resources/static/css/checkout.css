@@ -1,0 +1,16 @@
+.container {
+    margin-top: 50px;
+}
+.form-group label {
+    font-weight: bold;
+}
+.checkout-form {
+    padding: 30px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+.total-price {
+    margin-top: 30px;
+    text-align: right;
+    font-weight: bold;
+}

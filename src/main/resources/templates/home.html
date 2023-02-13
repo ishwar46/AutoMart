@@ -79,7 +79,7 @@
                                 </button>
                             </sec:authorize>
                             <sec:authorize sec:authorize="hasRole('ROLE_USER')">
-                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}" onclick="openPopup()"></a>
+                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>
                             </sec:authorize>
                         </div>
                     </div>
