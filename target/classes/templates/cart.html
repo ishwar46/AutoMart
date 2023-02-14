@@ -29,23 +29,21 @@
             <tr th:each="item : ${cartItems}">
                 <td>
                     <div class="media">
-                        <img th:src="@{'/images/' + ${item.productImage}}" width="64" height="64" class="mr-3"
-                             alt="Product image">
+                        <img th:src="@{'/images/' + ${item.getKey().getImage()}}" width="64" height="64" class="mr-3" alt="Product image">
                         <div class="media-body">
-                            <h5 class="mt-0" th:text="${item.productName}"></h5>
-                            <p th:text="${item.productDescription}"></p>
+                            <h5 class="mt-0" th:text="${item.getKey().getName()}"></h5>
+                            <p th:text="${item.getKey().getDescription()}"></p>
                         </div>
                     </div>
                 </td>
-                <td th:text="${item.price}"></td>
+                <td th:text="${item.getKey().getPrice()}"></td>
                 <td>
-                    <input type="number" min="1" class="form-control" th:value="${item.quantity}"
-                           th:name="${item.productId}" />
+                    <input type="number" min="1" class="form-control" th:value="${item.getValue()}"
+                           th:name="${item.getKey().getId()}" />
                 </td>
-                <td th:text="${item.total}"></td>
+                <td th:text="${item.getKey().getPrice().multiply(item.getValue())}"></td>
                 <td>
-                    <form th:action="@{/cart/remove}" method="post">
-                        <input type="hidden" th:name="productId" th:value="${item.productId}" />
+                    <form th:action="@{/cart/remove/{id}(id=${item.getKey().getId()})}" method="post">
                         <button type="submit" class="btn btn-danger">
                             <i class="fa fa-trash"></i>
                         </button>
@@ -53,6 +51,7 @@
                 </td>
             </tr>
             </tbody>
+
         </table>
     </div>
 

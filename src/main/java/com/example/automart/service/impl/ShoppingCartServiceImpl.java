@@ -63,4 +63,13 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         System.out.println("Product has been confirm");
         // Normally there would be payment etc.
     }
+
+//    public String displayProductsInCart() {
+//        StringBuilder sb = new StringBuilder();
+//        for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+//            sb.append(entry.getKey().getName()).append(" (").append(entry.getValue()).append(")\n");
+//        }
+//        return sb.toString();
+//    }
+
 }

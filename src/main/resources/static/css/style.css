@@ -35,16 +35,16 @@ span {
     padding-right: 5px;
 }
 
-footer {
-    background-color: #008cc0;
-    position: relative;
-    bottom: 0;
-    line-height: 20px;
-    /*height:100px ;*/
-}
+/*footer {*/
+/*    background-color: #008cc0;*/
+/*    position: relative;*/
+/*    bottom: 0;*/
+/*    line-height: 20px;*/
+/*    !*height:100px ;*!*/
+/*}*/
 
 .container {
-    height: 500px;
+    height: 100px;
 }
 
 .alert {

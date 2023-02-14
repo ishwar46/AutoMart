@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class CartController {
@@ -25,21 +26,25 @@ public class CartController {
 
     @GetMapping("/cart")
     public String cart(Model model){
+        if (shoppingCartService.productsInCart().isEmpty()) {
+            return "emptyCart";
+        }
         model.addAttribute("products", shoppingCartService.productsInCart());
         model.addAttribute("totalPrice", shoppingCartService.totalPrice());
 
         return "cart";
     }
 
-    @GetMapping("/cart/add/{id}")
-    public String addProductToCart(@PathVariable("id") long id){
+    @PostMapping("/cart/add/{id}")
+    public String addToCart(@PathVariable("id") long id) {
         Product product = productService.findById(id);
-        if (product != null){
+        if (product != null) {
             shoppingCartService.addProduct(product);
             logger.debug(String.format("Product with id: %s added to shopping cart.", id));
         }
         return "redirect:/home";
     }
+
 
     @GetMapping("/cart/remove/{id}")
     public String removeProductFromCart(@PathVariable("id") long id){
@@ -64,4 +69,6 @@ public class CartController {
 
         return "redirect:/cart";
     }
+
+
 }
