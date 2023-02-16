@@ -164,9 +164,17 @@
     background-color: #00b2ff;
 
 }
+.slider{
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
 
 /*Best Selling*/
 .bbb_viewed {
+    height: 300px;
     padding-top: 51px;
     padding-bottom: 60px;
     background: #eff6fa
@@ -257,7 +265,7 @@
 }
 
 .bbb_viewed_price span {
-    position: relative;
+    /*position: relative;*/
     font-size: 12px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.6);
@@ -266,7 +274,7 @@
 
 .bbb_viewed_price span::after {
     display: block;
-    position: absolute;
+    /*position: absolute;*/
     top: 6px;
     left: -2px;
     width: calc(100% + 4px);
