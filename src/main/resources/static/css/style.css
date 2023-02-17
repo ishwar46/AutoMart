@@ -180,15 +180,15 @@ a:hover::after{
     display: inline-block;
     padding: 10px 20px;
     border-radius: 25px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: rgba(255, 255, 255, 0);
     text-decoration: none;
     transition: all 0.2s;
 }
 
 .logout:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 20px rgb(0, 140, 192);
 }
 
 .navbar{
