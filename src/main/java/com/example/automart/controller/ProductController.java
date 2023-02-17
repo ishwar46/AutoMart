@@ -78,15 +78,30 @@ public class ProductController {
         return "redirect:/home";
     }
 
-    @GetMapping("/product/delete/{id}")
-    public String deleteProduct(@PathVariable("id") long productId){
-        Product product = productService.findById(productId);
-        if (product != null){
-           productService.delete(productId);
-           logger.debug(String.format("Product with id: %s successfully deleted.", product.getId()));
-           return "redirect:/home";
-        }else {
-            return "error/404";
-        }
+//    @GetMapping("/product/delete/{id}")
+//    public String deleteProduct(@PathVariable("id") long productId){
+//        Product product = productService.findById(productId);
+//        if (product != null){
+//           productService.delete(productId);
+//           logger.debug(String.format("Product with id: %s successfully deleted.", product.getId()));
+//           return "redirect:/home";
+//        }else {
+//            return "error/404";
+//        }
+//    }
+@GetMapping("/product/delete/{id}")
+public String deleteProduct(@PathVariable("id") long productId, Model model){
+    Product product = productService.findById(productId);
+    if (product != null){
+        productService.delete(productId);
+        logger.debug(String.format("Product with id: %s successfully deleted.", product.getId()));
+        model.addAttribute("message", "Product deleted successfully");
+        model.addAttribute("showModal", true);
+        return "redirect:/home";
+    } else {
+        return "error/404";
     }
+}
+
+
 }

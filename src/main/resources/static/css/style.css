@@ -76,6 +76,8 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 20px 0;
+    padding: 20px;
+
 
 }
 
@@ -112,6 +114,26 @@ nav {
     border-bottom-right-radius: 5px;
 
 }
+
+@media (min-width: 576px) {
+    .card-deck {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    .card {
+        flex-basis: 50%;
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        flex-basis: 25%;
+    }
+}
+
 
 .btn-primary {
     background-color: blue;
