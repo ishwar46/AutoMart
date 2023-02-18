@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CShipping Details</title>
+    <link rel="stylesheet" href="../static/css/stocks.css">
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/stocks.css}" />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="form">
+            <div class="left-side">
+                <div class="left-heading">
+                    <h3>Confirm your shipping details</h3>
+                </div>
+                <div class="steps-content">
+                    <h3>Step <span class="step-number">1</span></h3>
+                    <p class="step-number-content active">Enter your personal information here.</p>
+                    <p class="step-number-content d-none">Enter your details to continue</p>
+                    <p class="step-number-content d-none">Help companies get to know you better by telling then
+                        about your past experiences.</p>
+                </div>
+                <ul class="progress-bar">
+                    <li class="active">Personal Information</li>
+                    <li>Address Details</li>
+                    <li>Confirm Payment</li>
+                </ul>
+
+            </div>
+            <div class="right-side">
+                <div class="main active">
+                    <small><i class="fa fa-smile-o"></i></small>
+                    <div class="text">
+                        <h2>Your Personal Information</h2>
+                        <p>Enter your personal information here.</p>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="text" required require id="user_name">
+                            <span>First Name</span>
+                        </div>
+                        <div class="input-div">
+                            <input type="text" required>
+                            <span>Last Name</span>
+                        </div>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="text" required require>
+                            <span>Phone number</span>
+                        </div>
+                        <div class="input-div">
+                            <input type="text" required require>
+                            <span>E-mail Address</span>
+                        </div>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <select>
+                                <option>Select Province</option>
+                                <option>Bagmati</option>
+                            </select>
+
+                        </div>
+                        <div class="input-div">
+
+                            <select>
+                                <option>Select City</option>
+                                <option>Kathmandu</option>
+                                <option>Lalitpur</option>
+                                <option>Bhatkapur</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="next_button">Next Step</button>
+                    </div>
+                </div>
+                <div class="main">
+                    <small><i class="fa fa-smile-o"></i></small>
+                    <div class="text">
+                        <h2>Confirm Shipping Details</h2>
+                        <p>Can you talk about your past work experience?</p>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="text" required require>
+                            <span>City</span>
+                        </div>
+                        <div class="input-div">
+                            <input type="text" required require>
+                            <span>Postal Code</span>
+                        </div>
+                    </div>
+                    <div class="input-text">
+                        <div class="input-div">
+                            <input type="text" required>
+                            <span>Apt, Suite, etc (Optional)</span>
+                        </div>
+                        <div class="input-div">
+                            <input type="text" required>
+                            <span>Street (Optional)</span>
+                        </div>
+                    </div>
+                    <div class="buttons button_space">
+                        <button class="back_button">Back</button>
+                        <button class="next_button">Next Step</button>
+                    </div>
+                </div>
+                <div class="main">
+                    <small><i class="fa fa-smile-o"></i></small>
+                    <div class="text">
+                        <h2>Confirm your Payment</h2>
+                        <p>Choose Payment Option</p>
+                    </div>
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" name="payment-option" id="credit-card">
+                            <label for="credit-card">
+                                <img src="https://seeklogo.com/images/K/khalti-logo-F0B049E67E-seeklogo.com.png"
+                                     style="height: 50px; width: 100px;" alt="Credit Card">
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment-option" id="paypal">
+                            <label for="paypal">
+                                <img src="https://seeklogo.com/images/K/khalti-logo-F0B049E67E-seeklogo.com.png"
+                                     style="height: 50px; width: 100px;" alt="Credit Card">
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment-option" id="apple-pay">
+                            <label for="apple-pay">
+                                <img src="https://seeklogo.com/images/K/khalti-logo-F0B049E67E-seeklogo.com.png"
+                                     style="height: 50px; width: 100px;" alt="Credit Card">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="buttons button_space">
+                        <button class="back_button">Back</button>
+                        <button class="next_button">Next Step</button>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+
+                    <div class="text congrats">
+                        <h2>Congratulations!</h2>
+                        <p>Thanks <span class="shown_name"></span> your order is confirmed. We have sent you more details in your registered email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../static/js/stocks.js"></script>
+<!--<script th:href="@{/js/stocks.js}"></script>-->
+
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+</body>
+
+</html>
