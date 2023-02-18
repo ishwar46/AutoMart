@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../static/css/task.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+<body>
+<div class="main-wrapper">
+  <h2>Tasks</h2>
+  <div class="panels-wrap">
+    <div class="left-panel">
+      <div class="insert-box cardbox">
+        <p><b>Insert/ Update Task</b></p>
+        <span>Enter an ID and Task to do to add / or update</span>
+        <div class="input-wrapper">
+          <input id="inputKey" type="text" placeholder="Enter ID" />
+          <input id="inputValue" type="text" placeholder="To Do" />
+        </div>
+        <button type="button" id="btnInsert">Submit</button>
+      </div>
+      <div class="read-box cardbox">
+        <p><b>Search Task</b></p>
+        <span>Enter Task Id</span>
+        <div class="input-wrapper">
+          <input id="inputReadDataKey" type="text" placeholder="Enter ID" />
+          <button type="button" id="btnReadData">Read Data</button>
+        </div>
+        <p id="readedDataHere"></p>
+      </div>
+      <div class="delete-box cardbox">
+        <p><b>Delete Task</b></p>
+        <span>Enter an ID to delete task.</span>
+        <div class="input-wrapper">
+          <input id="inputDelKey" type="text" placeholder="Enter ID" />
+          <button type="button" id="btnDelete">Delete Data</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="display-all-box cardbox">
+        <p><b>List of Tasks</b></p>
+        <span id="avialRecords"></span>
+        <p id="autoFILL"></p>
+        <div id="lsOutput"></div>
+        <div id="deleteAllBtn" class="delete-all">
+          <button type="button" id="btnAllDelete">
+            <i class="fa fa-trash"></i> Delete All Tasks
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../static/js/task.js"></script>
+</body>
+</html>
