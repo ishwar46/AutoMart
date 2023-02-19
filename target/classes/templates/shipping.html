@@ -3,44 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CRUD Operation</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="../static/css/stocks.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script> -->
-
+    <title>CShipping Details</title>
+    <link rel="stylesheet" th:href="@{~/css/stocks.css}">
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/stocks.css}" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
-
 <div class="container">
     <div class="card">
         <div class="form">
             <div class="left-side">
                 <div class="left-heading">
-                    <h3>indeed</h3>
+                    <h3>Confirm your shipping details</h3>
                 </div>
                 <div class="steps-content">
                     <h3>Step <span class="step-number">1</span></h3>
-                    <p class="step-number-content active">Enter your personal information to get closer to
-                        companies.</p>
-                    <p class="step-number-content d-none">Get to know better by adding your diploma,certificate and
-                        education life.</p>
+                    <p class="step-number-content active">Enter your personal information here.</p>
+                    <p class="step-number-content d-none">Enter your details to continue</p>
                     <p class="step-number-content d-none">Help companies get to know you better by telling then
                         about your past experiences.</p>
-                    <p class="step-number-content d-none">Add your profile piccture and let companies find youy
-                        fast.</p>
                 </div>
                 <ul class="progress-bar">
                     <li class="active">Personal Information</li>
-                    <li>Education</li>
-                    <li>Work Experience</li>
-                    <li>User Photo</li>
+                    <li>Address Details</li>
+                    <li>Confirm Payment</li>
                 </ul>
-
-
 
             </div>
             <div class="right-side">
@@ -48,7 +36,7 @@
                     <small><i class="fa fa-smile-o"></i></small>
                     <div class="text">
                         <h2>Your Personal Information</h2>
-                        <p>Enter your personal information to get closer to copanies.</p>
+                        <p>Enter your personal information here.</p>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
@@ -73,16 +61,8 @@
                     <div class="input-text">
                         <div class="input-div">
                             <select>
-                                <option>Select Country</option>
-                                <option>India</option>
-                                <option>France</option>
-                                <option>UK</option>
-                                <option>USA</option>
-                                <option>Germany</option>
-                                <option>Russia</option>
-                                <option>China</option>
-                                <option>Japan</option>
-                                <option>Pakistan</option>
+                                <option>Select Province</option>
+                                <option>Bagmati</option>
                             </select>
 
                         </div>
@@ -90,15 +70,10 @@
 
                             <select>
                                 <option>Select City</option>
-                                <option>New Delhi</option>
-                                <option>Paris</option>
-                                <option>London</option>
-                                <option>Washington D.C.</option>
-                                <option>Berlin</option>
-                                <option>Moscow</option>
-                                <option>Bejing</option>
-                                <option>Tokyo</option>
-                                <option>Islamabad</option>
+                                <option>Kathmandu</option>
+                                <option>Lalitpur</option>
+                                <option>Bhatkapur</option>
+
                             </select>
                         </div>
                     </div>
@@ -109,80 +84,61 @@
                 <div class="main">
                     <small><i class="fa fa-smile-o"></i></small>
                     <div class="text">
-                        <h2>Education</h2>
-                        <p>Inform companies about your education life.</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>School Name</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Board Name</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>College/University name</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <select>
-                                <option>Select Course</option>
-                                <option>BCA</option>
-                                <option>B-TECH</option>
-                                <option>BA</option>
-                                <option>B-COM</option>
-                                <option>B-SC</option>
-                                <option>MBA</option>
-                                <option>MCA</option>
-                                <option>M-COM</option>
-                                <option>M-TECH</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                <div class="main">
-                    <small><i class="fa fa-smile-o"></i></small>
-                    <div class="text">
-                        <h2>Work Experiences</h2>
+                        <h2>Confirm Shipping Details</h2>
                         <p>Can you talk about your past work experience?</p>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
                             <input type="text" required require>
-                            <span>Experience 1</span>
+                            <span>City</span>
                         </div>
                         <div class="input-div">
                             <input type="text" required require>
-                            <span>Position</span>
+                            <span>Postal Code</span>
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
                             <input type="text" required>
-                            <span>Experience 2</span>
+                            <span>Apt, Suite, etc (Optional)</span>
                         </div>
                         <div class="input-div">
                             <input type="text" required>
-                            <span>Position</span>
+                            <span>Street (Optional)</span>
                         </div>
                     </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Experience 3</span>
+                    <div class="buttons button_space">
+                        <button class="back_button">Back</button>
+                        <button class="next_button">Next Step</button>
+                    </div>
+                </div>
+                <div class="main">
+                    <small><i class="fa fa-smile-o"></i></small>
+                    <div class="text">
+                        <h2>Confirm your Payment</h2>
+                        <p>Choose Payment Option</p>
+                    </div>
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" name="payment-option" id="credit-card">
+                            <label for="credit-card">
+                                <img src="https://seeklogo.com/images/K/khalti-logo-F0B049E67E-seeklogo.com.png"
+                                     style="height: 50px; width: 100px;" alt="Credit Card">
+                            </label>
                         </div>
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Position</span>
+                        <div class="payment-option">
+                            <input type="radio" name="payment-option" id="paypal">
+                            <label for="paypal">
+                                <img src="https://seeklogo.com/images/K/khalti-logo-F0B049E67E-seeklogo.com.png"
+                                     style="height: 50px; width: 100px;" alt="Credit Card">
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment-option" id="apple-pay">
+                            <label for="apple-pay">
+                                <img src="https://seeklogo.com/images/K/khalti-logo-F0B049E67E-seeklogo.com.png"
+                                     style="height: 50px; width: 100px;" alt="Credit Card">
+                            </label>
                         </div>
                     </div>
                     <div class="buttons button_space">
@@ -191,38 +147,6 @@
                     </div>
                 </div>
 
-
-
-                <div class="main">
-                    <small><i class="fa fa-smile-o"></i></small>
-                    <div class="text">
-                        <h2>User Photo</h2>
-                        <p>Upload your profile picture and share yourself.</p>
-                    </div>
-                    <div class="user_card">
-                        <span></span>
-                        <div class="circle">
-                            <span><img src="https://i.imgur.com/hnwphgM.jpg"></span>
-
-                        </div>
-                        <div class="social">
-                            <span><i class="fa fa-share-alt"></i></span>
-                            <span><i class="fa fa-heart"></i></span>
-
-                        </div>
-                        <div class="user_name">
-                            <h3>Peter Hawkins</h3>
-                            <div class="detail">
-                                <p><a href="#">Izmar,Turkey</a>Hiring</p>
-                                <p>17 last day . 94Apply</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="submit_button">Submit</button>
-                    </div>
-                </div>
                 <div class="main">
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -231,15 +155,15 @@
 
                     <div class="text congrats">
                         <h2>Congratulations!</h2>
-                        <p>Thanks Mr./Mrs. <span class="shown_name"></span> your information have been submitted
-                            successfully for the future reference we will contact you soon.</p>
+                        <p>Thanks <span class="shown_name"></span> your order is confirmed. We have sent you more details in your registered email.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="../static/js/stocks.js"></script>
+<script th:src="@{~/js/stocks.js}"></script>
+<!--<script th:href="@{/js/stocks.js}"></script>-->
 
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->

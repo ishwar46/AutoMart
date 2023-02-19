@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/cart.css}" />
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css/}">
+    <link rel="stylesheet" type="text/css" th:href="@{~/css/cart.css}" />
 </head>
 
 <body>
@@ -29,7 +29,8 @@
             <tr th:each="item : ${cartItems}">
                 <td>
                     <div class="media">
-                        <img th:src="@{'/images/' + ${item.getKey().getImage()}}" width="64" height="64" class="mr-3" alt="Product image">
+<!--                        <img class="card-img-top" th:if="${!product.getImageUrl().isEmpty()}" th:src="${product.getImageUrl()}" alt="Card image">-->
+                        <img th:src="${product.getImageUrl()}" width="64" height="64" class="mr-3" alt="Product image">
                         <div class="media-body">
                             <h5 class="mt-0" th:text="${item.getKey().getName()}"></h5>
                             <p th:text="${item.getKey().getDescription()}"></p>
@@ -60,7 +61,7 @@
             <p>Subtotal: <span th:text="${subtotal}"></span></p>
             <p>Tax: <span th:text="${tax}"></span></p>
             <p>Total: <span th:text="${total}"></span></p>
-            <button type="button" class="btn btn-primary" th:href="@{/}">Checkout</button>
+            <button type="button" class="btn btn-primary" th:href="@{~/shipping}">Checkout</button>
         </div>
     </div>
 </div>

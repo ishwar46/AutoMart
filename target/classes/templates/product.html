@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label" th:text="#{product.category}"></label>
+                        <label class="control-label" th:text="#{product.product}"></label>
                         <label th:text="#{product.price}"></label>
                         <input type="search" th:field="*{price}" class="form-control input-lg" title="price" autofocus="false" />
                         <div class="alert alert-danger error-alert" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>

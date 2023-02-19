@@ -32,6 +32,16 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/shipping")
+    public String getShippingPage() {
+        return "shipping";
+    }
+
+    @GetMapping("/tasks")
+    public String getTasksPage() {
+        return "tasks";
+    }
+
     @RequestMapping("/searchByCategory")
     public String homePost(@RequestParam("categoryId") long categoryId, Model model){
         model.addAttribute("books", productService.findAllByCategoryId(categoryId));

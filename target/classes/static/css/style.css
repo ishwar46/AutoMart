@@ -150,6 +150,7 @@ nav {
     color: #888;
     font-size: 15px;
      color: white;
+     text-decoration: none;
 }
  a::after{
     content: "";
@@ -173,14 +174,16 @@ a:hover::after{
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    text-decoration: none;
 }
 
 .logout {
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 25px;
-    background-color: #ffffff;
     color: rgba(255, 255, 255, 0);
     text-decoration: none;
     transition: all 0.2s;
@@ -199,6 +202,7 @@ a:hover::after{
     padding-left: 10px;
     padding-right: 10px;
     color: #f7f7f7;
+    text-decoration: none;
 }
 
 .pdname{

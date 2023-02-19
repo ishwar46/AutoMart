@@ -11,121 +11,120 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/car.css}" />
 
+    <Title>AutoMart- One Stop for your Ride</Title>
 </head>
 
-<body>
+ <body>
 <!-- Comments-->
     <div class="d-flex flex-column">
         <div th:replace="fragments/header :: header"></div>
     </div>
-<!-- This div contains a carousel that is displaying some products with a short description -->
-<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="mask flex-center">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-7 col-12 order-md-1 order-2">
-                            <h4>Black/White GP Pro Riding Gloves For Men</h4>
-                            <p>With enhanced ergonomic shaping and design details, the GP Pro R3 is anatomically engineered for performance, protection and comfort. Tested on MotoGP and WSBK circuits around the world, the GP Pro R3 features Alpinestars exclusive Dynamic Friction Shield (DFS) protectors with advanced airflow ventilation and aramidic reinforcement to ensure this glove is primed for superior trackday performance.</p>
-                            <br>
-                            <a href="@{/shipping}">BUY NOW</a>
-                        </div>
-                        <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://tinypic.host/images/2023/02/18/gloves.png"
-                                                                             class="mx-auto" alt="slide"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="mask flex-center">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-7 col-12 order-md-1 order-2">
-                            <h4>AGV K1 Soleluna 2017</h4>
-                            <p>K1 is the brand new AGV sport helmet for everyday riding challenges.
-                                Born from AGV racing technology, ready for every road experience. K1, an helmet for winners.</p>
-                            <br>
-                            <a href="@{/user}">BUY NOW</a>
-                        </div>
-                        <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://tinypic.host/images/2023/02/18/agv.png"
-                                                                             class="mx-auto" alt="slide"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-            <br>
-            <div class="box-heading">
-                <h2 class="cnit-h2">New Product</h2>
-                <div class="float-right">
-                    <a href="https://hardwarepasal.com/product?clearanceSaleProducts=1" style="color: #3f3f3f;" class="seeAll">See All &gt;</a>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="row">
-                <div class="card-deck">
-                    <div class="card" th:each="product : ${products}" th:if="${!products.isEmpty()}">
-                        <div class="heart i">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                        <img class="card-img-top" th:if="${!product.getImageUrl().isEmpty()}" th:src="${product.getImageUrl()}" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title" th:text="${product.getName()}"></h4>
-                            <p class="card-text" th:text="${product.getDescription()}"></p>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between">
-                            <p class="textprice mb-0" th:text="${product.getPrice()}"></p>
-                            <div class="d-flex justify-content-end">
-                                <sec:authorize sec:authorize="hasRole('ROLE_ADMIN')">
-                                    <button class="btn">
-                                        <a  th:href="@{'product/edit/' + ${product.getId()}}" class="text-dark">Edit</a>
-                                    </button>
-                                    <button class="btn">
-                                        <a  th:href="@{'product/delete/' + ${product.getId()}}" class="text-dark">Delete</a>
-                                    </button>
-                                </sec:authorize>
-
-                                <sec:authorize sec:authorize="hasRole('ROLE_USER')">
-                                    <form th:action="@{/cart/add/{id}(id=${product.id})}" method="post">
-                                        <div class="buttons">
-                                            <button type="submit">Add to cart</button>
-                                        </div>
-                                    </form>
-                                </sec:authorize>
-
-<!--                                Buy Now-->
-
-                                <sec:authorize sec:authorize="hasRole('ROLE_USER')">
-                                    <div class="buybuttons">
-                                        <button type="submit">Buy Now</button>
-                                    </div>
-                                </sec:authorize>
-
-                                <!--                            <sec:authorize sec:authorize="hasRole('ROLE_USER')">-->
-                                <!--                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>-->
-                                <!--                            </sec:authorize>-->
+    <!-- This div contains a carousel that is displaying some products with a short description -->
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Black/White GP Pro Riding Gloves For Men</h4>
+                                <p>With enhanced ergonomic shaping and design details, the GP Pro R3 is anatomically engineered for performance, protection and comfort. Tested on MotoGP and WSBK circuits around the world, the GP Pro R3 features Alpinestars exclusive Dynamic Friction Shield (DFS) protectors with advanced airflow ventilation and aramidic reinforcement to ensure this glove is primed for superior trackday performance.</p>
+                                <br>
+                                <a th:href="@{~/shipping}">BUY NOW</a>
                             </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://tinypic.host/images/2023/02/18/gloves.png"
+                                                                                 class="mx-auto" alt="slide"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>AGV K1 Soleluna 2017</h4>
+                                <p>K1 is the brand new AGV sport helmet for everyday riding challenges.
+                                    Born from AGV racing technology, ready for every road experience. K1, an helmet for winners.</p>
+                                <br>
+                                <a th:href="@{~/shipping}">BUY NOW</a>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://tinypic.host/images/2023/02/18/agv.png"
+                                                                                 class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+    <div class="box-heading">
+        <h2 class="cnit-h2">New Product</h2>
+        <div class="float-right">
+            <a href="https://hardwarepasal.com/product?clearanceSaleProducts=1" style="color: #3f3f3f;" class="seeAll">See All &gt;</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 
     <div class="row">
-        <div class="col">
-            <p>This is my new section that shows below the card deck</p>
+        <div class="card-deck">
+            <div class="card" th:each="product : ${products}" th:if="${!products.isEmpty()}">
+                <div class="heart i">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img class="card-img-top" th:if="${!product.getImageUrl().isEmpty()}" th:src="${product.getImageUrl()}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title" th:text="${product.getName()}"></h4>
+                    <p class="card-text" th:text="${product.getDescription()}"></p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <p class="textprice mb-0" th:text="${product.getPrice()}"></p>
+                    <div class="d-flex justify-content-end">
+                        <sec:authorize sec:authorize="hasRole('ROLE_ADMIN')">
+                            <button class="btn">
+                                <a  th:href="@{'product/edit/' + ${product.getId()}}" class="text-dark">Edit</a>
+                            </button>
+                            <button class="btn">
+                                <a  th:href="@{'product/delete/' + ${product.getId()}}" class="text-dark">Delete</a>
+                            </button>
+                        </sec:authorize>
+
+                        <sec:authorize sec:authorize="hasRole('ROLE_USER')">
+                            <form th:action="@{/cart/add/{id}(id=${product.id})}" method="post">
+                                <div class="buttons">
+                                    <button type="submit">Add to cart</button>
+                                </div>
+                            </form>
+                        </sec:authorize>
+
+                        <!--                                Buy Now-->
+
+                        <sec:authorize sec:authorize="hasRole('ROLE_USER')">
+                            <div class="buybuttons">
+                                <button type="submit">Buy Now</button>
+                            </div>
+                        </sec:authorize>
+
+                        <!--                            <sec:authorize sec:authorize="hasRole('ROLE_USER')">-->
+                        <!--                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>-->
+                        <!--                            </sec:authorize>-->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <p>This is my new section that shows below the card deck</p>-->
 <!--        </div>-->
 <!--    </div>-->
 
@@ -140,7 +139,6 @@
             alert('Item added to cart!');
         });
     </script>
-
 
 <!--//Link Js-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

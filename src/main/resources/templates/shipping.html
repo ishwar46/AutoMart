@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CShipping Details</title>
-    <link rel="stylesheet" href="../static/css/stocks.css">
+    <link rel="stylesheet" th:href="@{~/css/stocks.css}">
 <!--    <link rel="stylesheet" type="text/css" th:href="@{/css/stocks.css}" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
 <div class="container">
     <div class="card">
         <div class="form">
@@ -163,7 +162,7 @@
         </div>
     </div>
 </div>
-<script src="../static/js/stocks.js"></script>
+<script th:src="@{~/js/stocks.js}"></script>
 <!--<script th:href="@{/js/stocks.js}"></script>-->
 
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
