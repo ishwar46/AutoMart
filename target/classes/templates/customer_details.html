@@ -15,29 +15,56 @@
     <img th:src="@{~/images/abc.webp}">
 </div>
 <h1>This is Database Table</h1>
+
+<!--<div class="Table">-->
+<!--    <a th:href="@{/userList}"></a>-->
+
+<!--    <table border="1" class="table">-->
+<!--        <tr>-->
+<!--&lt;!&ndash;            <th>Id</th>&ndash;&gt;-->
+<!--            <th>Username</th>-->
+<!--            <th>Email</th>-->
+<!--            <th>Full Name</th>-->
+<!--            <th>Address</th>-->
+<!--            <th>Action</th>-->
+
+<!--        </tr>-->
+<!--        <tr th:each="user:${userList}">-->
+<!--&lt;!&ndash;            <td th:text="${user.id}"></td>&ndash;&gt;-->
+<!--           -->
+<!--            <td>-->
+<!--                <a th:href="@{~/deleteUser/} + ${user.id}">Delete</a>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</div>-->
+<div class="Table">
+    <a th:href="@{/userList}"></a>
+    <table class="Table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody  class="Table-body" >
+
+        <tr th:each = "user: ${userList}">
+            <td th:text="${user.username}"> </td>
+            <td th:text="${user.email}"> </td>
+            <td th:text="${user.fullName}"></td>
+            <td th:text="${user.city}"></td>
+            <td>
+                <a th:href="@{~/deleteUser/}+${user.id}" class = "btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <!--<h1><a href="http://localhost:8087/user/create">Create New User</a></h1>-->
-<table border="1" class="table">
-    <tr>
-        <th>Id</th>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Full Name</th>
-        <th>Address</th>
-        <th>Action</th>
 
-    </tr>
-    <tr th:each="user:${userList}">
-        <td th:text="${user.id}"></td>
-        <td th:text="${user.username}"> </td>
-        <td th:text="${user.email}"> </td>
-        <td th:text="${user.fullName}"></td>
-        <td th:text="${user.city}"></td>
-        <td>
-            <a th:href="@{~/user/delete/} + ${user.id}">Delete
-            </a>
-    </tr>
-
-</table>
 
 </body>
 </html>

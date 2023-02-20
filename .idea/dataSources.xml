@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="automartdb@localhost" uuid="b1a399a7-c5f9-469a-a77a-1c619f8b9a30">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/automartdb</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="autodb@localhost" uuid="63438d89-abfa-43ef-989a-eb5b98d097cc">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

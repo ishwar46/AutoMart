@@ -15,7 +15,6 @@ import java.util.List;
 @Controller
 public class UserController {
     private final UserService userService;
-
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
@@ -27,14 +26,11 @@ public class UserController {
 
         if (user != null) {
             model.addAttribute("user", user);
-        }else {
-            return "error/404";
         }
-
         return "user";
     }
 
-    @GetMapping("/list")
+    @GetMapping("/userList")
     public String getUSerList(Model model) {
         List<User> users = userService.fetchAll();
 
@@ -47,17 +43,15 @@ public class UserController {
                         .city(user.getCity())
                         .build()
 
+
         ));
-
-//        model.addAttribute("UPLOAD_DIRECTORY", "/" + UPLOAD_DIRECTORY);
-
-        return "/customer_details";
+        return "customer_details";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("deleteUser/{id}")
     public String deleteUser(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes) {
         userService.deleteById(id);
         redirectAttributes.addFlashAttribute("deleteMsg", "Row delete successfully");
-        return "redirect:/user/list";
+        return "redirect:/userList";
     }
 }

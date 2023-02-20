@@ -156,7 +156,7 @@
 
 .buttons button {
     height: 40px;
-    width: 120px;
+    width: 80px;
     color: #00b2ff;
     border: 2px solid #00b2ff;
     background-color: #fff;
@@ -175,7 +175,7 @@
 
 .buybuttons button{
     height: 40px;
-    width: 120px;
+    width: 80px;
     color: #fff;
     background-color: #00b2ff;
     font-size: 16px;
