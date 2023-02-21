@@ -20,7 +20,7 @@ btnInsert.onclick = function () {
     }
 
     else {
-        alert("Must Enter ID");
+        alert("Must Enter Vehicle Number");
     }
 };
 
@@ -30,7 +30,7 @@ for (i = 0; i < localStorage.length; i++) {
 
     lsOutput.innerHTML += `
     <hr />
-    ID is: ${key} <br /><br />
+    Vehicle Number is: ${key} <br /><br />
     Task to do is: ${value}<br />
     `;
 
@@ -56,7 +56,7 @@ btnReadData.onclick = function () {
     if (inputReadDataKeyNew) {
         if (readeddData) {
             readedDataHere.innerHTML += `
-            Task of requested ID is: ${readeddData}
+            Task of requested Vehicle Number is: ${readeddData}
         `;
         } else {
             readedDataHere.innerHTML = `
