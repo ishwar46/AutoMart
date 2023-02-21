@@ -1,28 +1,57 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit=no>
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css/}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Error 500</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <style>
+        .container {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div th:replace="fragments/header :: header"></div>
+<div class="container">
+    <img src="https://tinypic.host/images/2023/02/21/500.png" alt="Error 500 Icon" width="500" height="350">
+    <h1>Error 500</h1>
+    <h3>Internal Server Error</h3>
+    <p>We're sorry, but something went wrong on our end.</p>
+    <a href="/home">Go back to the homepage</a>
+</div>
 
-    <div class="container">
-        <div class="starter-template">
-            <h1 th:text="#{error.title} + ' 500'"></h1>
-            <h3 th:text="#{error.internal}"></h3>
-            <a href="/home" th:text="#{home.back}"></a>
-        </div>
-    </div>
-
-
-    <div th:replace="fragments/footer :: footer"></div>
 </body>
 
 </html>
