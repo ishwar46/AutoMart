@@ -32,7 +32,7 @@
 
 .container .card .left-side {
     width: 35%;
-    background-color: #304767;
+    background-color: #008cc0;
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -128,26 +128,6 @@
 .d-none {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*left-side-end*/

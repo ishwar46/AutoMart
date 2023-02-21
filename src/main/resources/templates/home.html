@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/car.css}" />
 
     <Title>AutoMart- One Stop for your Ride</Title>
+    <link rel="icon" type="image/png" th:href="@{/images/logoauto.png}"/>
+
 </head>
 
  <body>
@@ -109,7 +111,7 @@
 
                         <sec:authorize sec:authorize="hasRole('ROLE_USER')">
                             <div class="buybuttons">
-                                <button type="submit">Buy Now</button>
+                                <button type="submit" >Buy Now</button>
                             </div>
                         </sec:authorize>
 
