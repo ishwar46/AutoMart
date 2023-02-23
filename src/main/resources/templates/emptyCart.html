@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="icon" type="image/png" th:href="@{/images/logoauto.png}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{~/css/emptycart.css}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -23,11 +24,14 @@
                 </div>
                 <div class="card-body cart">
                     <div class="col-sm-12 empty-cart-cls text-center">
-                        <img src="../static/images/cartempty.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart mb-4 mr-3">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.1 12.6a2 2 0 0 0 2 1.4h10a2 2 0 0 0 2-1.4L23 6H6"></path>
+                        </svg>
                         <h3><strong>Your Cart is Empty</strong></h3>
                         <h4>Add something to make me happy :)</h4>
                         <a th:href="@{/home}" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
-
                     </div>
                 </div>
             </div>

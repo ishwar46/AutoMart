@@ -15,58 +15,13 @@
 <body>
 
 <div class="container">
-<!--    <div class="table-responsive">-->
-<!--        <table class="table table-striped">-->
-<!--            <thead>-->
-<!--            <tr>-->
-<!--                <th>Product</th>-->
-<!--                <th>Price</th>-->
-<!--                <th>Quantity</th>-->
-<!--                <th>Total</th>-->
-<!--                <th></th>-->
-<!--            </tr>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--            <tr th:each="item : ${cartItems}">-->
-<!--                <td>-->
-<!--                    <div class="media">-->
-<!--&lt;!&ndash;                        <img class="card-img-top" th:if="${!product.getImageUrl().isEmpty()}" th:src="${product.getImageUrl()}" alt="Card image">&ndash;&gt;-->
-<!--                        <img th:src="${product.getImageUrl()}" width="64" height="64" class="mr-3" alt="Product image">-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="mt-0" th:text="${item.getKey().getName()}"></h5>-->
-<!--                            <p th:text="${item.getKey().getDescription()}"></p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </td>-->
-<!--                <td th:text="${item.getKey().getPrice()}"></td>-->
-<!--                <td>-->
-<!--                    <input type="number" min="1" class="form-control" th:value="${item.getValue()}"-->
-<!--                           th:name="${item.getKey().getId()}" />-->
-<!--                </td>-->
-<!--                <td th:text="${item.getKey().getPrice().multiply(item.getValue())}"></td>-->
-<!--                <td>-->
-<!--                    <form th:action="@{/cart/remove/{id}(id=${item.getKey().getId()})}" method="post">-->
-<!--                        <button type="submit" class="btn btn-danger">-->
-<!--                            <i class="fa fa-trash"></i>-->
-<!--                        </button>-->
-<!--                    </form>-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--            </tbody>-->
-
-<!--        </table>-->
-<!--    </div>-->
-
     <h1>Your Cart Has Items. Please Click Continue to checkout.</h1>
-
-    <div class="d-flex justify-content-end">
+    <a th:href="@{~/shipping}" class="d-flex justify-content-end">
         <div class="text-right">
-<!--            <p>Subtotal: <span th:text="${subtotal}"></span></p>-->
-<!--            <p>Tax: <span th:text="${tax}"></span></p>-->
-<!--            <p>Total: <span th:text="${total}"></span></p>-->
-            <button type="button" class="btn btn-primary" th:href="@{~/shipping}">Checkout</button>
+            <button type="button" class="btn btn-primary">Checkout</button>
         </div>
-    </div>
+    </a>
+
 </div>
 </body>
 </html>

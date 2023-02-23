@@ -111,9 +111,10 @@
 
                         <sec:authorize sec:authorize="hasRole('ROLE_USER')">
                             <div class="buybuttons">
-                                <button type="submit" >Buy Now</button>
+                                <a th:href="@{~/shipping}" class="btn btn-primary">Buy Now</a>
                             </div>
                         </sec:authorize>
+
 
                         <!--                            <sec:authorize sec:authorize="hasRole('ROLE_USER')">-->
                         <!--                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>-->
